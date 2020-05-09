@@ -1,0 +1,16 @@
+title: TestProject
+description: This is the test description.
+template:
+  repo: testproject-template
+  name: testproject
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
